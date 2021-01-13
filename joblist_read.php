@@ -27,6 +27,12 @@ $sql = 'SELECT * FROM joblist_table';
 // この時は単に'SELECT * FROM joblist_table'という文字列を$sqlで定義しているだけ
 
 
+// 受け取ったデータを変数に入れる
+$joblist = $_POST['joblist'];
+$skill = $_POST['skill'];
+$region = $_POST['region'];
+$resistDate = $_POST['resistDate'];
+
 $stmt = $pdo->prepare($sql); //PDOクラスのprepareを引っ張ってくる
 
 // var_dump($stmt);//object(PDOStatement)#2 (1) { ["queryString"]=> string(27) "SELECT * FROM joblist_table" }
@@ -72,6 +78,7 @@ if ($status == false) {
     }
   }
   
+  // msgはjoblist_logic_deleteにて定義されるので、deleteしないとこれは受け取らない。
   $output2 = "{$_POST["msg"]}";
 
       // $output .= "<td><a href=joblist_deleteall.php}>全削除</a>\n</td>";

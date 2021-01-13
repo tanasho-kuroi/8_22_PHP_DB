@@ -40,7 +40,7 @@ if ($status == false) {
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);//fetchAll 全てのデータを配列として格納する
   $output = "";
 
-// var_dump($result);//配列が全て入る
+// var_dump($result);//配列が全て入る≈
 // exit();
 
   foreach ($result as $record) {
