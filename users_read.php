@@ -17,9 +17,7 @@ $sql = 'SELECT * FROM users_table';
 }
 // この時は単に'SELECT * FROM users_table'という文字列を$sqlで定義しているだけ
 
-
 $stmt = $pdo->prepare($sql); //PDOクラスのprepareを引っ張ってくる
-
 // var_dump($stmt);//object(PDOStatement)#2 (1) { ["queryString"]=> string(27) "SELECT * FROM joblist_table" }
 // exit();
 

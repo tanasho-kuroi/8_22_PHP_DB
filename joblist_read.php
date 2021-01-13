@@ -61,8 +61,6 @@ if ($status == false) {
 // exit();
 
   foreach ($result as $record) {
-// var_dump($record["delete_flag"]);//
-// exit();
     if($record["delete_flag"]==1){
     }else{
       $output .= "<tr>"; //.=は追加していく演算子
@@ -77,11 +75,11 @@ if ($status == false) {
       //  ↓HTMLに<tr><td>resistDate</td><td>joblist</td>....<tr>の形でデータが入る 
     }
   }
-  
+
   // msgはjoblist_logic_deleteにて定義されるので、deleteしないとこれは受け取らない。
   $output2 = "{$_POST["msg"]}";
 
-      // $output .= "<td><a href=joblist_deleteall.php}>全削除</a>\n</td>";
+  // $output .= "<td><a href=joblist_deleteall.php}>全削除</a>\n</td>";
  // $valueの参照を解除する．解除しないと，再度foreachした場合に最初からループしない
   // 今回は以降foreachしないので影響なし
   unset($record);
